@@ -9,6 +9,7 @@ class App extends Component {
       position: 0,
     };
     this.handleKeyDown = this.handleKeyDown.bind(this);
+    this.buttonClickHandler = this.buttonClickHandler.bind(this); // bind method here
   }
 
   componentDidMount() {
@@ -27,9 +28,9 @@ class App extends Component {
     }
   }
 
-  buttonClickHandler = () => {
+  buttonClickHandler() {
     this.setState({ startGame: true });
-  };
+  }
 
   renderChoice() {
     if (!this.state.startGame) {
